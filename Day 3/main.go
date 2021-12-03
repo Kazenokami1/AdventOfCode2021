@@ -10,7 +10,7 @@ import (
 
 func main() {
 	start := time.Now()
-	f, err := os.Open("day3SampleInput.txt")
+	f, err := os.Open("day3Input.txt")
 	check(err)
 	defer f.Close()
 
