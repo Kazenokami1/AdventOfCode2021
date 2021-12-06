@@ -67,13 +67,6 @@ func recursiveFish(initialFish map[int]int, numberOfDays int) (map[int]int, int)
 		totalFishReturned := 0
 		totalNumberOfFish, totalFishReturned = recursiveFish(totalNumberOfFish, numberOfDays-7)
 		totalFish += totalFishReturned
-	} else if numberOfDays == 7 {
-		for _, value := range initialFish {
-			if value-numberOfDays < 0 {
-				totalFish += value
-			}
-			totalFish += value
-		}
 	} else {
 		for key, value := range initialFish {
 			if key-numberOfDays < 0 {
